@@ -1,0 +1,24 @@
+# == Schema Information
+#
+# Table name: incomes
+#
+#  id          :integer          not null, primary key
+#  description :string
+#  value       :integer
+#  comments    :string
+#  userId_id   :integer          not null
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
+one:
+  description: MyString
+  value: 1
+  comments: MyString
+  userId: one
+
+two:
+  description: MyString
+  value: 1
+  comments: MyString
+  userId: two
