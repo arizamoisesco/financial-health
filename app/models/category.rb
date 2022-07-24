@@ -12,4 +12,5 @@
 #
 class Category < ApplicationRecord
     has_many :income_categories
+    has_many :expense_categories
 end

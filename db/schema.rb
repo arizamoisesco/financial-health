@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_23_235804) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_24_012147) do
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.string "icon"
@@ -18,6 +18,25 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_23_235804) do
     t.integer "category_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "expense_categories", force: :cascade do |t|
+    t.integer "expense_id", null: false
+    t.integer "category_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_expense_categories_on_category_id"
+    t.index ["expense_id"], name: "index_expense_categories_on_expense_id"
+  end
+
+  create_table "expenses", force: :cascade do |t|
+    t.string "description"
+    t.integer "value"
+    t.string "comments"
+    t.integer "userId_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["userId_id"], name: "index_expenses_on_userId_id"
   end
 
   create_table "income_categories", force: :cascade do |t|
@@ -51,6 +70,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_23_235804) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "expense_categories", "categories"
+  add_foreign_key "expense_categories", "expenses"
+  add_foreign_key "expenses", "userIds"
   add_foreign_key "income_categories", "categories"
   add_foreign_key "income_categories", "incomes"
   add_foreign_key "incomes", "userIds"

@@ -1,16 +1,18 @@
 # == Schema Information
 #
-# Table name: income_categories
+# Table name: expenses
 #
 #  id          :integer          not null, primary key
-#  income_id   :integer          not null
-#  category_id :integer          not null
+#  description :string
+#  value       :integer
+#  comments    :string
+#  userId_id   :integer          not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #
 require "test_helper"
 
-class IncomeCategoryTest < ActiveSupport::TestCase
+class ExpenseTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
