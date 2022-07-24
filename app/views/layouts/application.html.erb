@@ -14,15 +14,11 @@
 
   <body>
     
-    <main class="container mx-auto mt-28 px-5 flex">
+    <main class="container mx-auto h-auto mt-10 flex">
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
       <% if user_signed_in? %>
         <%= render partial: 'partials/sidebar' %>
-        <p>
-        Ingresaste sesión como 
-        <%= link_to current_user.email, edit_user_registration_path %>
-        </p> 
       <% else %>
         <%= link_to 'Login', new_user_session_path %>
         <%= link_to 'Create Account', new_user_registration_path%>
