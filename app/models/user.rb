@@ -10,6 +10,7 @@
 #  remember_created_at    :datetime
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
+#  name                   :string
 #
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
@@ -19,4 +20,6 @@ class User < ApplicationRecord
 
   has_many :incomes
   has_many :expenses
+
+  has_one_attached :image, :dependent => :destroy;
 end
