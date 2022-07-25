@@ -6,11 +6,11 @@
 #  description :string
 #  value       :integer
 #  comments    :string
-#  userId_id   :integer          not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  user_id     :integer          not null
 #
 class Expense < ApplicationRecord
-  belongs_to :userId
+  belongs_to :user
   has_many :expense_categories
 end
