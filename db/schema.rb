@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_24_201824) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_25_170241) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -80,10 +80,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_24_201824) do
     t.string "description"
     t.integer "value"
     t.string "comments"
-    t.integer "userId_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["userId_id"], name: "index_incomes_on_userId_id"
+    t.integer "user_id", null: false
+    t.index ["user_id"], name: "index_incomes_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -106,5 +106,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_24_201824) do
   add_foreign_key "expenses", "userIds"
   add_foreign_key "income_categories", "categories"
   add_foreign_key "income_categories", "incomes"
-  add_foreign_key "incomes", "userIds"
+  add_foreign_key "incomes", "users"
 end

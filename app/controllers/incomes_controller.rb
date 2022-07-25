@@ -65,6 +65,6 @@ class IncomesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def income_params
-      params.require(:income).permit(:description, :value, :comments, :userId_id)
+      params.require(:income).permit(:description, :value, :comments, :user_id)
     end
 end
