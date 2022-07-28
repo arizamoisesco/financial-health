@@ -1,19 +1,24 @@
-<div id="<%= dom_id income %>">
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Description:</strong>
-    <%= income.description %>
-  </p>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Value:</strong>
-    <%= income.value %>
-  </p>
+<section id="<%= dom_id income %>" class="flex justify-between items-center" >
+  
+  <section>
+    <p class="my-5">
+      <strong class="block font-medium mb-1">Descripción:</strong>
+      <%= income.description %>
+    </p>
 
+    <p class="my-5">
+      <strong class="block font-medium mb-1">Dinero:</strong>
+      $ <%= income.value %>
+    </p>  
+  </section>
+  
+<!--
   <p class="my-5">
     <strong class="block font-medium mb-1">Comments:</strong>
     <%= income.comments %>
   </p>
-<!--
+
   <p class="my-5">
     <strong class="block font-medium mb-1">Userid:</strong>
     <%= income.user_id %>
@@ -21,8 +26,11 @@
 -->
 
   <% if action_name != "show" %>
-    <%= link_to "Show this income", income, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <%= link_to 'Edit this income', edit_income_path(income), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
-    <hr class="mt-6">
+    <section>
+      <%= link_to "Detalles", income, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+      <%= link_to 'Editar', edit_income_path(income), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    </section>
   <% end %>
-</div>
+  
+</section>
+<hr class="mt-6">

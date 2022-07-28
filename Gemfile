@@ -76,3 +76,5 @@ gem "tailwindcss-rails", "~> 2.0"
 gem "devise", "~> 4.8"
 
 gem 'annotate', git: 'https://github.com/ctran/annotate_models.git'
+
+gem "chartkick"

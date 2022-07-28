@@ -1,28 +1,33 @@
-<div id="<%= dom_id expense %>">
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Description:</strong>
-    <%= expense.description %>
-  </p>
+<section id="<%= dom_id expense %>" class="flex justify-between items-center">
+  <section>
+    <p class="my-5">
+      <strong class="block font-medium mb-1">Description:</strong>
+      <%= expense.description %>
+    </p>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Value:</strong>
-    <%= expense.value %>
-  </p>
-
+    <p class="my-5">
+      <strong class="block font-medium mb-1">Value:</strong>
+      <%= expense.value %>
+    </p>
+  </section>
+  
+<!--
   <p class="my-5">
     <strong class="block font-medium mb-1">Comments:</strong>
     <%= expense.comments %>
   </p>
 
-  <!-- <p class="my-5">
+  <p class="my-5">
     <strong class="block font-medium mb-1">Userid:</strong>
     <%= expense.user_id %>
   </p>
   -->
 
   <% if action_name != "show" %>
-    <%= link_to "Show this expense", expense, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <%= link_to 'Edit this expense', edit_expense_path(expense), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
-    <hr class="mt-6">
+    <section>
+      <%= link_to "Detalles", expense, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+      <%= link_to 'Editar', edit_expense_path(expense), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    </section>
   <% end %>
-</div>
+</section>
+<hr class="mt-6">
