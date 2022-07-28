@@ -22,10 +22,11 @@ class IncomesController < ApplicationController
   # POST /incomes or /incomes.json
   def create
     @income = Income.new(income_params)
+    @income.user_id = current_user.id if current_user
 
     respond_to do |format|
       if @income.save
-        format.html { redirect_to income_url(@income), notice: "Income was successfully created." }
+        format.html { redirect_to income_url(@income), notice: "Ingreso creado exitosamente" }
         format.json { render :show, status: :created, location: @income }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +39,7 @@ class IncomesController < ApplicationController
   def update
     respond_to do |format|
       if @income.update(income_params)
-        format.html { redirect_to income_url(@income), notice: "Income was successfully updated." }
+        format.html { redirect_to income_url(@income), notice: "El ingreso fue actualizado con exito" }
         format.json { render :show, status: :ok, location: @income }
       else
         format.html { render :edit, status: :unprocessable_entity }
