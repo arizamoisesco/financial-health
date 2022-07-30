@@ -3,7 +3,8 @@ class IncomesController < ApplicationController
 
   # GET /incomes or /incomes.json
   def index
-    @incomes = Income.all
+    #@incomes = Income.all
+    @incomes = Income.where(user_id: current_user)
   end
 
   # GET /incomes/1 or /incomes/1.json

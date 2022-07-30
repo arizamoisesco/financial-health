@@ -8,9 +8,9 @@
   <%= select_month(Date.today) %>
   <section>
     <p class="font-bold">Total ingresos</p>
-    <p>$ <%= @total_incomes %></p>
+    <p><%= number_to_currency(@total_incomes, :separator => ",", :delimiter => ".", precision: 0) %></p>
     <p class="font-bold">Total Gastos </p>
-    <p>$ <%= @total_expenses %></p>
+    <p><%= number_to_currency(@total_expenses, :separator => ",", :delimiter => ".", precision: 0)  %></p>
   </section>
   <!--Agregar la sección de lista de ingresos y gastos organizados por fecha, considerar usar un partial -->
   <section></section>
