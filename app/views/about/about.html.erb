@@ -1,5 +1,7 @@
-<section class="flex flex-col items-center">
+<section class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
     <%= image_tag 'icon.png', class:"w-24 h-24 rounded-full mx-auto", size:"384x512"%>
-    <h1>Financial Health</h1>
+    <h1 class="text-xl font-semibold">Financial Health</h1>
     <p>Versión 0.1</p>
+    <p>Hecho con amor en Colombia por <%= link_to 'arizamoises', 'https://twitter.com/arizamoisesco', class: 'text-purple-600 dark:text-purple-500' %></p>
+    <%= Time.new.year%>
 </section>
