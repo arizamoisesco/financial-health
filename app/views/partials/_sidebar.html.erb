@@ -2,7 +2,7 @@
 <aside class="w-64 ml-1" aria-label="Sidebar">
 
    <div class="overflow-y-auto py-4 px-3 h-screen bg-gray-50 rounded dark:bg-gray-800">
-      <section class="flex justify-center">
+      <section class="flex justify-center mb-4">
          <% if current_user.image.present? %>
             
             <%= image_tag current_user.image, class:"p-1 w-20 h-20 rounded-full ring-2 ring-gray-300 dark:ring-gray-500"%>
@@ -11,15 +11,15 @@
          <% end %>
       </section>
    
-      <span class="flex justify-center text-xl font-semibold whitespace-nowrap dark:text-white">
+      <span class="flex justify-center text-xl font-semibold whitespace-nowrap text-purple-600 dark:text-purple-500 mb-4">
          <%= current_user.name %>
       </span>
 
       <ul class=" flex flex-col h-auto space-y-2">
          <li class="flex items-center flex-row hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">
-            <svg aria-hidden="true" class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>
+            <svg aria-hidden="true" class="w-6 h-6 text-gray-900  transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>
             <span class="ml-3">
-               <%= link_to 'Dashboard', root_path, class: "flex items-center p-2 text-base font-normal text-gray-900  dark:text-white"  %>
+               <%= link_to 'Dashboard', root_path, class: "flex items-center p-2 text-base font-normal text-gray-900   dark:text-white"  %>
             </span>  
 
          </li>
@@ -49,8 +49,7 @@
             </span>
          </li>
          <li>
-            <%= link_to 'Cerrar sesión', destroy_user_session_path, data: {'turbo-method': :delete}, class: "text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"%>
-            </a>
+            <%= link_to 'Cerrar sesión', destroy_user_session_path, data: {'turbo-method': :delete}, class: "text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"%>
          </li>
       </ul>
    </div>

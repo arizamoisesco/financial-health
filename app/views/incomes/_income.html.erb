@@ -9,7 +9,7 @@
 
     <p class="my-5">
       <strong class="block font-medium mb-1">Dinero:</strong>
-      $ <%= income.value %>
+      <%= number_to_currency(income.value,:separator => ",", :delimiter => ".", precision: 0) %>
     </p>  
   </section>
   

@@ -7,7 +7,7 @@
 
     <p class="my-5">
       <strong class="block font-medium mb-1">Value:</strong>
-      <%= expense.value %>
+      <%= number_to_currency(expense.value, :separator => ",", :delimiter => ".", precision: 0) %>
     </p>
   </section>
   
