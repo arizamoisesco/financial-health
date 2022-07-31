@@ -6,11 +6,16 @@
   <section></section>
   <!--Agregar la sección totales de ingresos y gastos-->
   <%= select_month(Date.today) %>
-  <section class="mb-5">
-    <p class="font-bold text-2xl">Total ingresos</p>
-    <p><%= number_to_currency(@total_incomes, :separator => ",", :delimiter => ".", precision: 0) %></p>
-    <p class="font-bold">Total Gastos </p>
-    <p><%= number_to_currency(@total_expenses, :separator => ",", :delimiter => ".", precision: 0)  %></p>
+  <section class="flex justify-center mb-5">
+    <section class="flex flex-col mr-5 ">
+      <p class="font-bold text-2xl">Total ingresos</p>
+      <p class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"><%= number_to_currency(@total_incomes, :separator => ",", :delimiter => ".", precision: 0) %></p>
+    </section>
+    <section class="flex flex-col ml-5">
+      <p class="font-bold text-2xl">Total Gastos </p>
+      <p class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"><%= number_to_currency(@total_expenses, :separator => ",", :delimiter => ".", precision: 0) %></p>
+    </section>
+    
   </section>
   <!--Agregar la sección de lista de ingresos y gastos organizados por fecha, considerar usar un partial -->
   <section>
