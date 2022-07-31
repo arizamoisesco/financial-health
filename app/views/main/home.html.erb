@@ -6,13 +6,17 @@
   <section></section>
   <!--Agregar la sección totales de ingresos y gastos-->
   <%= select_month(Date.today) %>
-  <section>
-    <p class="font-bold">Total ingresos</p>
+  <section class="mb-5">
+    <p class="font-bold text-2xl">Total ingresos</p>
     <p><%= number_to_currency(@total_incomes, :separator => ",", :delimiter => ".", precision: 0) %></p>
     <p class="font-bold">Total Gastos </p>
     <p><%= number_to_currency(@total_expenses, :separator => ",", :delimiter => ".", precision: 0)  %></p>
   </section>
   <!--Agregar la sección de lista de ingresos y gastos organizados por fecha, considerar usar un partial -->
-  <section></section>
+  <section>
+    <p class="font-bold text-2xl">Resumen de ingresos y gastos del mes</p>
+    <%= render @incomes %>
+    <%= render @expenses %>
+  </section>
   
 </section>
