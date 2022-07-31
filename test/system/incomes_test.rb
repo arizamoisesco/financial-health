@@ -16,7 +16,7 @@ class IncomesTest < ApplicationSystemTestCase
 
     fill_in "Comments", with: @income.comments
     fill_in "Description", with: @income.description
-    fill_in "Userid", with: @income.userId_id
+    fill_in "User", with: @income.user_id
     fill_in "Value", with: @income.value
     click_on "Create Income"
 
@@ -30,7 +30,7 @@ class IncomesTest < ApplicationSystemTestCase
 
     fill_in "Comments", with: @income.comments
     fill_in "Description", with: @income.description
-    fill_in "Userid", with: @income.userId_id
+    fill_in "User", with: @income.user_id
     fill_in "Value", with: @income.value
     click_on "Update Income"
 

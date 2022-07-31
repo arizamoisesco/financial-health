@@ -16,7 +16,7 @@ class ExpensesTest < ApplicationSystemTestCase
 
     fill_in "Comments", with: @expense.comments
     fill_in "Description", with: @expense.description
-    fill_in "Userid", with: @expense.userId_id
+    fill_in "User", with: @expense.user_id
     fill_in "Value", with: @expense.value
     click_on "Create Expense"
 
@@ -30,7 +30,7 @@ class ExpensesTest < ApplicationSystemTestCase
 
     fill_in "Comments", with: @expense.comments
     fill_in "Description", with: @expense.description
-    fill_in "Userid", with: @expense.userId_id
+    fill_in "User", with: @expense.user_id
     fill_in "Value", with: @expense.value
     click_on "Update Expense"
 
