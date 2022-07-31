@@ -4,7 +4,7 @@ class CreateExpenses < ActiveRecord::Migration[7.0]
       t.string :description
       t.integer :value
       t.string :comments
-      t.references :userId, null: false, foreign_key: true
+      t.references :user, null: false, foreign_key: true
 
       t.timestamps
     end
