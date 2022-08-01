@@ -1,4 +1,4 @@
-![Logo](https://drive.google.com/file/d/1zqnbdnPvixRTdWa-79qMuIsyPd9n0AqE/view?usp=sharing "prueba" )
+[![icon.png](https://i.postimg.cc/MKZjNGn4/icon.png)](https://postimg.cc/NLVMrB77)
 
 
 # Financial Health 
@@ -69,7 +69,14 @@ Si deseas probar la aplicación a continuación encontrarás un link para accede
 
 ## Vistazo general
 
-![App Screenshot](https://drive.google.com/file/d/14JucINKLlgYxJng_y9w_hCRrkYv6ML5r/view?usp=sharing)
+###  Interfaz - Inicio de sesión 
+[![login.png](https://i.postimg.cc/jC0hb1h8/login.png)](https://postimg.cc/H8zM0BR5)
+
+###  Interfaz - Panel principal
+[![dashboard.png](https://i.postimg.cc/fTML2NmJ/dashboard.png)](https://postimg.cc/Lh025Gyp)
+
+###  Modelo relacional
+![App Screenshot](https://i.imgur.com/KG0RzW7.png)
 
 
 ## Roadmap
