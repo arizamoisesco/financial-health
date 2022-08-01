@@ -87,6 +87,12 @@ Si deseas probar la aplicación a continuación encontrarás un link para accede
 
 - Darle mejor diseño a las notificaciones
 
+- Agregar funcionalidad para diferenciar deudas, prestamos y prestamo
+
+- Categorias con imágenes para organizar mejor los registros hechos
+
+- Diferenciar el tipo de perfil (Novato y avanzado) para personalizar la interfaz
+
 
 
 ## Autor
