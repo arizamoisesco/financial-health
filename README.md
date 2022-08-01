@@ -1,4 +1,4 @@
-[![icon.png](https://i.postimg.cc/MKZjNGn4/icon.png)](https://postimg.cc/NLVMrB77)
+[![icon.png](app/assets/images/icon.png)](https://financial-health.herokuapp.com/)
 
 
 # Financial Health 
