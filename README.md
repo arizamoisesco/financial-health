@@ -93,7 +93,8 @@ Si deseas probar la aplicación a continuación encontrarás un link para accede
 
 - Diferenciar el tipo de perfil (Novato y avanzado) para personalizar la interfaz
 
-
+## Documentación
+[Documentación de Financial health](https://drive.google.com/file/d/11nzneoYfKyslnFTbnpZAM3fF3YtAm-BH/view?usp=sharing)
 
 ## Autor
 
